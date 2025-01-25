@@ -10,5 +10,5 @@ testpaths = ["tests"]
 
 
 [tool.mypy]
-mypy = "src"
+files = "src"
 ignore_missing_imports = true
