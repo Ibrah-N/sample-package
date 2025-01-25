@@ -1,13 +1,13 @@
 import os
 from pathlib import Path
 
-package_name = "mongodb_connect2"
+package_name = "sample_pkg"
 
 list_of_files = [
    ".github/workflows/ci.yaml",
    "src/__init__.py",
    f"src/{package_name}/__init__.py", 
-   f"src/{package_name}/mongo_crud.py", 
+   f"src/{package_name}/calc.py", 
    "tests/__init__.py",
    "tests/unit/__init__.py",
    "tests/unit/unit.py",
@@ -26,6 +26,7 @@ list_of_files = [
 for filepath in list_of_files:
     filepath = Path(filepath)
     filedir, filename = os.path.split(filepath)
+
     if filedir != "":
         os.makedirs(filedir, exist_ok=True)
 

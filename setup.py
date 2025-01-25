@@ -1,31 +1,28 @@
 from setuptools import setup, find_packages
-from typing import List
 
-with open('README.md', 'r', encoding='utf-8') as f:
-    long_description = f.read()     
-   
 
-__version__ = "0.0.4"
+# package long description
+with open("README.md", 'r', encoding='utf-8') as f:
+    description = f.read()
+
+
+# packge info
+AUTHER_NAME = "Ibrah-N"
+PACKAGE_NAME = "samplepkg"
+AUTHER_EMAIL = "ibrahnfreenlancer@gmail.com"
 REPO_NAME = "sample-package"
-PKG_NAME= "databaseautomation2"
-AUTHOR_USER_NAME = "Ibrah-N"
-AUTHOR_EMAIL = "ibrahnfreenlancer@gmail.com"
 
+
+# package setup
 setup(
-    name=PKG_NAME,
-    version=__version__,
-    author=AUTHOR_USER_NAME,
-    author_email=AUTHOR_EMAIL,
-    description="A python package for connecting with database.",
-    long_description=long_description,
-    long_description_content="text/markdown",
-    url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
-    project_urls={
-        "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
-    },
-    package_dir={"": "src"},
-    packages=find_packages(where="src"),
+    name=PACKAGE_NAME, 
+    description="It is sample practice package",
+    long_description=description, 
+    author=AUTHER_NAME, 
+    author_email=AUTHER_EMAIL, 
+    url=f"https://github/{AUTHER_NAME}/{REPO_NAME}", 
+    project_urls = {"Bug Tracker"  : f"https://github/{AUTHER_NAME}/{REPO_NAME}/issues"},
+    package_dir={"" : "src"}, 
+    packages=find_packages(where="scr")
+    # install_requires=[]
     )
-
-
-
